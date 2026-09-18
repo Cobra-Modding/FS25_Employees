@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GUIProfiles>
+  <Profile name="employeesText" extends="baseReference" with="anchorTopLeft">
+    <size value="900px 30px"/>
+    <textSize value="18px"/>
+    <textColor value="0.92 0.92 0.88 1"/>
+    <textAlignment value="left"/>
+  </Profile>
+  <Profile name="employeesMuted" extends="employeesText">
+    <textColor value="0.68 0.68 0.68 1"/>
+    <textSize value="16px"/>
+  </Profile>
+  <Profile name="employeesHeading" extends="employeesText">
+    <textSize value="23px"/>
+    <textBold value="true"/>
+  </Profile>
+  <Profile name="employeesCenterHeading" extends="employeesHeading">
+    <textAlignment value="center"/>
+  </Profile>
+  <Profile name="employeesSmallCenterText" extends="employeesMuted">
+    <textSize value="14px"/>
+    <textAlignment value="center"/>
+  </Profile>
+  <Profile name="employeesSectionTitle" extends="employeesHeading">
+    <textSize value="18px"/>
+  </Profile>
+  <Profile name="employeesMapTitle" extends="employeesHeading">
+    <textSize value="20px"/>
+  </Profile>
+  <Profile name="employeesMapText" extends="employeesMuted">
+    <textSize value="17px"/>
+    <textMaxNumLines value="8"/>
+  </Profile>
+  <Profile name="employeesButton" extends="fs25_subCategorySelectorTabbedTab" with="anchorTopLeft">
+    <size value="350px 42px"/>
+    <textSize value="18px"/>
+  </Profile>
+  <Profile name="employeesActionButton" extends="baseReference" with="anchorTopLeft">
+    <textSize value="16px"/>
+    <textBold value="true"/>
+    <textAlignment value="center"/>
+    <textVerticalAlignment value="middle"/>
+    <textOffset value="0px 0px"/>
+    <textUpperCase value="false"/>
+    <fitToContent value="false"/>
+    <drawChildrenLast value="true"/>
+    <handleFocus value="true"/>
+    <iconSize value="0px 0px"/>
+    <imageColor value="1 1 1 1"/>
+    <imageFocusedColor value="1 1 1 1"/>
+    <imageHighlightedColor value="1 1 1 1"/>
+    <imagePressedColor value="1 1 1 1"/>
+  </Profile>
+  <Profile name="employeesSecondaryButton" extends="baseReference" with="anchorTopLeft">
+    <textSize value="16px"/>
+    <textBold value="true"/>
+    <textAlignment value="center"/>
+    <textVerticalAlignment value="middle"/>
+    <textOffset value="0px 0px"/>
+    <textUpperCase value="false"/>
+    <fitToContent value="false"/>
+    <drawChildrenLast value="true"/>
+    <handleFocus value="true"/>
+    <iconSize value="0px 0px"/>
+    <imageColor value="1 1 1 1"/>
+    <imageFocusedColor value="1 1 1 1"/>
+    <imageHighlightedColor value="1 1 1 1"/>
+    <imagePressedColor value="1 1 1 1"/>
+  </Profile>
+  <Profile name="employeesArrowButton" extends="baseReference" with="anchorTopLeft">
+    <textSize value="16px"/>
+    <textBold value="true"/>
+    <textAlignment value="center"/>
+    <textVerticalAlignment value="middle"/>
+    <textOffset value="0px 0px"/>
+    <textUpperCase value="false"/>
+    <fitToContent value="false"/>
+    <drawChildrenLast value="true"/>
+    <handleFocus value="true"/>
+    <iconSize value="0px 0px"/>
+    <imageColor value="1 1 1 1"/>
+    <imageFocusedColor value="1 1 1 1"/>
+    <imageHighlightedColor value="1 1 1 1"/>
+    <imagePressedColor value="1 1 1 1"/>
+  </Profile>
+  <Profile name="employeesRow" extends="employeesButton">
+    <size value="420px 32px"/>
+    <textAlignment value="left"/>
+    <textOffset value="90px 20px"/>
+    <textUpperCase value="false"/>
+    <textSize value="18px"/>
+  </Profile>
+  <Profile name="employeesRowBg" extends="baseReference" with="anchorTopLeft">
+    <size value="420px 32px"/>
+  </Profile>
+  <Profile name="employeesHeaderIcon" extends="baseReference" with="anchorTopLeft">
+    <position value="13px -13px"/>
+    <size value="44px 44px"/>
+    <imageColor value="0.08 0.10 0.02 1"/>
+  </Profile>
+  <Profile name="employeesHeaderMonogram" extends="employeesText">
+    <position value="10px -10px"/>
+    <size value="50px 50px"/>
+    <textSize value="22px"/>
+    <textBold value="true"/>
+    <textColor value="0.025 0.025 0.025 1"/>
+    <textAlignment value="center"/>
+    <textVerticalAlignment value="middle"/>
+  </Profile>
+  <!-- Employee cards intentionally inherit directly from baseReference.
+       The old profile inherited the native FS25 sub-category tab profile,
+       including its small hotspot. That made only part of each row clickable. -->
+  <Profile name="employeesCard" extends="baseReference" with="anchorTopLeft">
+    <size value="330px 74px"/>
+    <textSize value="17px"/>
+    <textBold value="true"/>
+    <textAlignment value="left"/>
+    <textVerticalAlignment value="middle"/>
+    <textOffset value="84px 13px"/>
+    <textUpperCase value="false"/>
+    <fitToContent value="false"/>
+    <drawChildrenLast value="false"/>
+    <handleFocus value="true"/>
+    <iconSize value="0px 0px"/>
+    <imageColor value="1 1 1 1"/>
+    <imageFocusedColor value="1 1 1 1"/>
+    <imageHighlightedColor value="1 1 1 1"/>
+    <imageSelectedColor value="1 1 1 1"/>
+    <imagePressedColor value="1 1 1 1"/>
+  </Profile>
+  <Profile name="employeesCardRole" extends="employeesMuted">
+    <textSize value="13px"/>
+    <textColor value="0.72 0.74 0.72 1"/>
+  </Profile>
+  <Profile name="employeesCardMeta" extends="employeesText">
+    <textSize value="13px"/>
+    <textColor value="0.65 0.8 0.3 1"/>
+  </Profile>
+  <Profile name="employeesTrainingText" extends="employeesMuted">
+    <textSize value="14px"/>
+    <textMaxNumLines value="3"/>
+  </Profile>
+  <Profile name="employeesPageSlider" extends="baseReference" with="anchorTopLeft">
+    <size value="7px 537px"/>
+    <direction value="y"/>
+    <hasButtons value="false"/>
+    <minValue value="1"/>
+    <maxValue value="2"/>
+    <currentValue value="1"/>
+    <stepSize value="1"/>
+    <useStepRounding value="true"/>
+    <sliderSize value="7px 120px"/>
+  </Profile>
+  <Profile name="employeesNavImage" extends="baseReference" with="anchorTopLeft">
+    <size value="44px 44px"/>
+    <position value="0px 0px"/>
+  </Profile>
+  <Profile name="employeesCourseButton" extends="employeesActionButton">
+    <textSize value="14px"/>
+  </Profile>
+<Profile name="employeesOverviewRoles" extends="employeesMuted"><textSize value="14px"/><textMaxNumLines value="6"/><textVerticalAlignment value="top"/></Profile></GUIProfiles>

@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GUI name="EmployeesFrame">
+  <GuiElement profile="baseReference">
+    <GuiElement profile="fs25_menuContainer">
+      <Bitmap profile="employeesRowBg" id="noticePanelBg" position="790px -658px" size="780px 164px"/>
+      <Bitmap profile="employeesRowBg" id="trainingPanelBg" position="790px -120px" size="780px 521px"/>
+      <Bitmap profile="employeesRowBg" id="sidePanel" position="-170px 160px" size="416px 1040px"/>
+      <GuiElement profile="fs25_menuHeaderPanel" position="300px 92px">
+        <Bitmap profile="fs25_menuHeaderIconBg">
+          <Text profile="employeesHeaderMonogram" text="MA"/>
+        </Bitmap>
+        <Text profile="fs25_menuHeaderTitle" text="MITARBEITER"/>
+      </GuiElement>
+      <Button profile="employeesArrowButton" id="previousTabButton" text="" position="-143px 116px" size="42px 42px" onClick="onPreviousTab" fitToContent="false">
+        </Button>
+      <Text profile="employeesCenterHeading" id="categoryTitle" position="-88px 116px" size="250px 40px"/>
+      <Button profile="employeesArrowButton" id="nextTabButton" text="" position="168px 116px" size="42px 42px" onClick="onNextTab" fitToContent="false">
+        </Button>
+      <Text profile="employeesMuted" id="emptyText" text="Noch keine Mitarbeiter." position="-143px -8px" size="350px 40px"/>
+      <Text profile="employeesMuted" id="summary" position="-145px -638px" size="380px 28px"/>
+      <Slider profile="employeesPageSlider" id="pageSlider" position="213px 26px" size="6px 668px" direction="y" hasButtons="false" minValue="1" maxValue="9" currentValue="1" stepSize="1" useStepRounding="true" sliderSize="7px 120px" onChanged="onPageSliderChanged"/>
+      <Bitmap profile="employeesRowBg" id="hirePanelBg" position="-145px -682px" size="361px 155px"/>
+      <Text profile="employeesHeading" text="PERSONAL EINSTELLEN" position="-130px -696px" size="320px 28px"/>
+      <Text profile="employeesText" id="contractInfo" position="-130px -730px" size="320px 24px"/>
+      <Button profile="employeesActionButton" id="hireButton" text="Mitarbeiter einstellen" position="-130px -762px" size="315px 38px" onClick="onHire" fitToContent="false">
+        </Button>
+      <Button profile="employeesSecondaryButton" id="overviewButton" text="Personalübersicht" position="-130px -806px" size="315px 34px" onClick="onOverview" fitToContent="false"/>
+      <Bitmap profile="employeesRowBg" id="categoryDots[1]" position="10px 66px" size="10px 10px"/>
+      <Bitmap profile="employeesRowBg" id="categoryDots[2]" position="30px 66px" size="10px 10px"/>
+      <Bitmap profile="employeesRowBg" id="categoryDots[3]" position="50px 66px" size="10px 10px"/>
+      <Bitmap profile="employeesRowBg" id="categoryDots[4]" position="70px 66px" size="10px 10px"/>
+      <Bitmap profile="employeesRowBg" id="panelTab" position="236px -346px" size="34px 110px" handleFocus="false" visible="false">
+        </Bitmap>
+      <GuiElement profile="baseReference" id="detailContent" position="0px 0px" size="1600px 900px">
+        <Bitmap profile="employeesRowBg" id="profilePanelBg" position="280px -118px" size="480px 770px"/>
+        <Bitmap profile="employeesRowBg" id="portrait" position="315px -143px" size="310px 310px"/>
+        <Text profile="employeesCenterHeading" id="detailName" position="295px -471px" size="340px 40px"/>
+        <Text profile="employeesSectionTitle" text="VERTRAGSINFORMATIONEN" position="295px -526px" size="430px 30px"/>
+        <Bitmap profile="employeesRowBg" id="detailBackgrounds[1]" position="295px -566px" size="440px 38px"/>
+        <Text profile="employeesMuted" id="detailLabels[1]" text="Beschäftigung" position="310px -570px" size="170px 28px"/>
+        <Text profile="employeesText" id="detailValues[1]" text="" position="500px -570px" size="220px 28px"/>
+        <Bitmap profile="employeesRowBg" id="detailBackgrounds[2]" position="295px -609px" size="440px 38px"/>
+        <Text profile="employeesMuted" id="detailLabels[2]" text="Monatsgehalt" position="310px -613px" size="170px 28px"/>
+        <Text profile="employeesText" id="detailValues[2]" text="" position="500px -613px" size="220px 28px"/>
+        <Bitmap profile="employeesRowBg" id="detailBackgrounds[3]" position="295px -652px" size="440px 38px"/>
+        <Text profile="employeesMuted" id="detailLabels[3]" text="Arbeitszeit" position="310px -656px" size="170px 28px"/>
+        <Text profile="employeesText" id="detailValues[3]" text="" position="500px -656px" size="220px 28px"/>
+        <Bitmap profile="employeesRowBg" id="detailBackgrounds[4]" position="295px -695px" size="440px 38px"/>
+        <Text profile="employeesMuted" id="detailLabels[4]" text="Status" position="310px -699px" size="170px 28px"/>
+        <Text profile="employeesTrainingText" id="detailValues[4]" text="" position="500px -699px" size="220px 28px"/>
+        <Bitmap profile="employeesRowBg" id="detailBackgrounds[5]" position="295px -738px" size="440px 38px"/>
+        <Text profile="employeesMuted" id="detailLabels[5]" text="Alter" position="310px -742px" size="170px 28px"/>
+        <Text profile="employeesText" id="detailValues[5]" text="" position="500px -742px" size="220px 28px"/>
+        <Bitmap profile="employeesRowBg" id="detailBackgrounds[6]" position="295px -781px" size="440px 38px"/>
+        <Text profile="employeesMuted" id="detailLabels[6]" text="Vertrag" position="310px -785px" size="170px 28px"/>
+        <Text profile="employeesText" id="detailValues[6]" text="" position="500px -785px" size="220px 28px"/>
+        <Bitmap profile="employeesRowBg" id="detailBackgrounds[7]" position="295px -824px" size="440px 38px"/>
+        <Text profile="employeesMuted" id="detailLabels[7]" text="Aufgabengebiet" position="310px -828px" size="170px 28px"/>
+        <Text profile="employeesText" id="detailValues[7]" text="" position="500px -828px" size="220px 28px"/>
+        <Button profile="employeesActionButton" id="roleButton" text="Aufgabengebiet ändern" position="315px -875px" size="400px 42px" onClick="onRole" fitToContent="false"/>
+        <Text profile="employeesSectionTitle" text="KÜNDIGUNG" position="815px -751px" size="440px 30px"/>
+        <Button profile="employeesActionButton" id="noticeButton" text="Kündigung aussprechen" position="815px -830px" size="400px 46px" onClick="onNotice" fitToContent="false">
+          </Button>
+        <Button profile="employeesSecondaryButton" id="cancelButton" text="Abbrechen" position="1230px -830px" size="160px 46px" onClick="onCancelNotice" fitToContent="false">
+          </Button>
+        <Text profile="employeesSectionTitle" text="WEITERBILDUNGEN" position="815px -213px" size="620px 30px"/>
+        <Text profile="employeesMuted" text="Wähle gezielt eine Weiterbildung für deinen Mitarbeiter." position="815px -249px" size="735px 28px"/>
+        <Text profile="employeesMuted" text="Sprich die Kündigung aus, wenn du den Mitarbeiter nicht mehr beschäftigen möchtest." position="815px -791px" size="735px 28px"/>
+        <Bitmap profile="employeesRowBg" id="trainingCards[1]" position="815px -289px" size="730px 92px"/>
+        <Bitmap profile="employeesRowBg" id="trainingIcons[1]" position="835px -311px" size="48px 48px"/>
+        <Text profile="employeesSectionTitle" id="trainingLabels[1]" text="FELDARBEIT" position="910px -306px" size="260px 26px"/>
+        <Text profile="employeesText" id="trainingProgress[1]" position="1190px -306px" size="60px 26px"/>
+        <Button profile="employeesCourseButton" id="trainingButtons[1]" position="1260px -307px" size="265px 46px" onClick="onTrain1" fitToContent="false"/>
+        <Text profile="employeesTrainingText" id="trainingHints[1]" position="910px -341px" size="615px 32px"/>
+        <Bitmap profile="employeesRowBg" id="trainingCards[2]" position="815px -393px" size="730px 92px"/>
+        <Bitmap profile="employeesRowBg" id="trainingIcons[2]" position="835px -415px" size="48px 48px"/>
+        <Text profile="employeesSectionTitle" id="trainingLabels[2]" text="TRANSPORT" position="910px -410px" size="260px 26px"/>
+        <Text profile="employeesText" id="trainingProgress[2]" position="1190px -410px" size="60px 26px"/>
+        <Button profile="employeesCourseButton" id="trainingButtons[2]" position="1260px -411px" size="265px 46px" onClick="onTrain2" fitToContent="false"/>
+        <Text profile="employeesTrainingText" id="trainingHints[2]" position="910px -445px" size="615px 32px"/>
+        <Bitmap profile="employeesRowBg" id="trainingCards[3]" position="815px -497px" size="730px 92px"/>
+        <Bitmap profile="employeesRowBg" id="trainingIcons[3]" position="835px -519px" size="48px 48px"/>
+        <Text profile="employeesSectionTitle" id="trainingLabels[3]" text="TIERHALTUNG" position="910px -514px" size="260px 26px"/>
+        <Text profile="employeesText" id="trainingProgress[3]" position="1190px -514px" size="60px 26px"/>
+        <Button profile="employeesCourseButton" id="trainingButtons[3]" position="1260px -515px" size="265px 46px" onClick="onTrain3" fitToContent="false"/>
+        <Text profile="employeesTrainingText" id="trainingHints[3]" position="910px -549px" size="615px 32px"/>
+        <Bitmap profile="employeesRowBg" id="trainingCards[4]" position="815px -601px" size="730px 92px"/>
+        <Bitmap profile="employeesRowBg" id="trainingIcons[4]" position="835px -623px" size="48px 48px"/>
+        <Text profile="employeesSectionTitle" id="trainingLabels[4]" text="MASCHINENTECHNIK" position="910px -618px" size="260px 26px"/>
+        <Text profile="employeesText" id="trainingProgress[4]" position="1190px -618px" size="60px 26px"/>
+        <Button profile="employeesCourseButton" id="trainingButtons[4]" position="1260px -619px" size="265px 46px" onClick="onTrain4" fitToContent="false"/>
+        <Text profile="employeesTrainingText" id="trainingHints[4]" position="910px -653px" size="615px 32px"/>
+      </GuiElement>
+      <GuiElement profile="baseReference" id="overviewPanel" position="0px 0px" size="1600px 900px" visible="false">
+        <Bitmap profile="employeesRowBg" id="overviewPanelBg" position="285px -82px" size="1285px 748px"/>
+        <Text profile="employeesHeading" text="PERSONALÜBERSICHT" position="315px -105px" size="500px 34px"/>
+        <Text profile="employeesMuted" text="Beschäftigte nach Vertragsart und Aufgabengebiet. Sortiert nach Vertrag, Tätigkeit und Name." position="315px -142px" size="1190px 28px"/>
+        <Text profile="employeesSectionTitle" id="overviewMinorCount" position="335px -190px" size="270px 30px"/>
+        <Text profile="employeesSectionTitle" id="overviewPartCount" position="645px -190px" size="270px 30px"/>
+        <Text profile="employeesSectionTitle" id="overviewFullCount" position="955px -190px" size="270px 30px"/>
+        <Text profile="employeesSectionTitle" id="overviewTempCount" position="1265px -190px" size="270px 30px"/>
+        <Bitmap profile="employeesRowBg" id="overviewContractCards[1]" position="315px -176px" size="290px 162px"/>
+        <Bitmap profile="employeesRowBg" id="overviewContractCards[2]" position="625px -176px" size="290px 162px"/>
+        <Bitmap profile="employeesRowBg" id="overviewContractCards[3]" position="935px -176px" size="290px 162px"/>
+        <Bitmap profile="employeesRowBg" id="overviewContractCards[4]" position="1245px -176px" size="300px 162px"/>
+        <Text profile="employeesSectionTitle" text="BESCHÄFTIGUNG" position="325px -365px" size="185px 28px"/>
+        <Text profile="employeesSectionTitle" text="MITARBEITER" position="520px -365px" size="300px 28px"/>
+        <Text profile="employeesSectionTitle" text="AUFGABENGEBIET" position="830px -365px" size="275px 28px"/>
+        <Text profile="employeesOverviewRoles" id="overviewMinorRoles" position="335px -228px" size="250px 112px"/>
+        <Text profile="employeesOverviewRoles" id="overviewPartRoles" position="645px -228px" size="250px 112px"/>
+        <Text profile="employeesOverviewRoles" id="overviewFullRoles" position="955px -228px" size="250px 112px"/>
+        <Text profile="employeesOverviewRoles" id="overviewTempRoles" position="1265px -228px" size="260px 112px"/>
+        <Text profile="employeesSectionTitle" text="STATUS" position="1115px -365px" size="415px 28px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[1]" position="310px -402px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[1]" position="325px -404px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[1]" position="520px -404px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[1]" position="830px -404px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[1]" position="1115px -404px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[2]" position="310px -429px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[2]" position="325px -431px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[2]" position="520px -431px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[2]" position="830px -431px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[2]" position="1115px -431px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[3]" position="310px -456px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[3]" position="325px -458px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[3]" position="520px -458px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[3]" position="830px -458px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[3]" position="1115px -458px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[4]" position="310px -483px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[4]" position="325px -485px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[4]" position="520px -485px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[4]" position="830px -485px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[4]" position="1115px -485px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[5]" position="310px -510px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[5]" position="325px -512px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[5]" position="520px -512px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[5]" position="830px -512px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[5]" position="1115px -512px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[6]" position="310px -537px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[6]" position="325px -539px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[6]" position="520px -539px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[6]" position="830px -539px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[6]" position="1115px -539px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[7]" position="310px -564px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[7]" position="325px -566px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[7]" position="520px -566px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[7]" position="830px -566px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[7]" position="1115px -566px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[8]" position="310px -591px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[8]" position="325px -593px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[8]" position="520px -593px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[8]" position="830px -593px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[8]" position="1115px -593px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[9]" position="310px -618px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[9]" position="325px -620px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[9]" position="520px -620px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[9]" position="830px -620px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[9]" position="1115px -620px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[10]" position="310px -645px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[10]" position="325px -647px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[10]" position="520px -647px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[10]" position="830px -647px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[10]" position="1115px -647px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[11]" position="310px -672px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[11]" position="325px -674px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[11]" position="520px -674px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[11]" position="830px -674px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[11]" position="1115px -674px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[12]" position="310px -699px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[12]" position="325px -701px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[12]" position="520px -701px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[12]" position="830px -701px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[12]" position="1115px -701px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[13]" position="310px -726px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[13]" position="325px -728px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[13]" position="520px -728px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[13]" position="830px -728px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[13]" position="1115px -728px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[14]" position="310px -753px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[14]" position="325px -755px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[14]" position="520px -755px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[14]" position="830px -755px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[14]" position="1115px -755px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[15]" position="310px -780px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[15]" position="325px -782px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[15]" position="520px -782px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[15]" position="830px -782px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[15]" position="1115px -782px" size="415px 22px"/>
+        <Bitmap profile="employeesRowBg" id="overviewRowBackgrounds[16]" position="310px -807px" size="1235px 24px"/>
+        <Text profile="employeesTrainingText" id="overviewContracts[16]" position="325px -809px" size="185px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewNames[16]" position="520px -809px" size="300px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewRoles[16]" position="830px -809px" size="275px 22px"/>
+        <Text profile="employeesTrainingText" id="overviewStatuses[16]" position="1115px -809px" size="415px 22px"/>
+      </GuiElement>
+      <Button profile="employeesCard" id="employeeRows[1]" position="-143px -8px" size="330px 74px" onClick="onSelectEmployee1" fitToContent="false"/>
+      <Bitmap profile="employeesRowBg" id="rowBackgrounds[1]" position="-143px -8px" size="5px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowPortraits[1]" position="-143px -8px" size="74px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowStatusDots[1]" position="164px -19px" size="8px 8px"/>
+      <Text profile="employeesCardRole" id="rowRoles[1]" position="-60px -36px" size="220px 20px"/>
+      <Text profile="employeesCardMeta" id="rowMeta[1]" position="-60px -55px" size="240px 22px"/>
+      <Bitmap profile="employeesRowBg" id="rowTips[1]" position="184px -30px" size="15px 30px"/>
+      <Button profile="employeesCard" id="employeeRows[2]" position="-143px -88px" size="330px 74px" onClick="onSelectEmployee2" fitToContent="false"/>
+      <Bitmap profile="employeesRowBg" id="rowBackgrounds[2]" position="-143px -88px" size="5px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowPortraits[2]" position="-143px -88px" size="74px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowStatusDots[2]" position="164px -99px" size="8px 8px"/>
+      <Text profile="employeesCardRole" id="rowRoles[2]" position="-60px -116px" size="220px 20px"/>
+      <Text profile="employeesCardMeta" id="rowMeta[2]" position="-60px -135px" size="240px 22px"/>
+      <Bitmap profile="employeesRowBg" id="rowTips[2]" position="184px -110px" size="15px 30px"/>
+      <Button profile="employeesCard" id="employeeRows[3]" position="-143px -168px" size="330px 74px" onClick="onSelectEmployee3" fitToContent="false"/>
+      <Bitmap profile="employeesRowBg" id="rowBackgrounds[3]" position="-143px -168px" size="5px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowPortraits[3]" position="-143px -168px" size="74px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowStatusDots[3]" position="164px -179px" size="8px 8px"/>
+      <Text profile="employeesCardRole" id="rowRoles[3]" position="-60px -196px" size="220px 20px"/>
+      <Text profile="employeesCardMeta" id="rowMeta[3]" position="-60px -215px" size="240px 22px"/>
+      <Bitmap profile="employeesRowBg" id="rowTips[3]" position="184px -190px" size="15px 30px"/>
+      <Button profile="employeesCard" id="employeeRows[4]" position="-143px -248px" size="330px 74px" onClick="onSelectEmployee4" fitToContent="false"/>
+      <Bitmap profile="employeesRowBg" id="rowBackgrounds[4]" position="-143px -248px" size="5px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowPortraits[4]" position="-143px -248px" size="74px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowStatusDots[4]" position="164px -259px" size="8px 8px"/>
+      <Text profile="employeesCardRole" id="rowRoles[4]" position="-60px -276px" size="220px 20px"/>
+      <Text profile="employeesCardMeta" id="rowMeta[4]" position="-60px -295px" size="240px 22px"/>
+      <Bitmap profile="employeesRowBg" id="rowTips[4]" position="184px -270px" size="15px 30px"/>
+      <Button profile="employeesCard" id="employeeRows[5]" position="-143px -328px" size="330px 74px" onClick="onSelectEmployee5" fitToContent="false"/>
+      <Bitmap profile="employeesRowBg" id="rowBackgrounds[5]" position="-143px -328px" size="5px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowPortraits[5]" position="-143px -328px" size="74px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowStatusDots[5]" position="164px -339px" size="8px 8px"/>
+      <Text profile="employeesCardRole" id="rowRoles[5]" position="-60px -356px" size="220px 20px"/>
+      <Text profile="employeesCardMeta" id="rowMeta[5]" position="-60px -375px" size="240px 22px"/>
+      <Bitmap profile="employeesRowBg" id="rowTips[5]" position="184px -350px" size="15px 30px"/>
+      <Button profile="employeesCard" id="employeeRows[6]" position="-143px -408px" size="330px 74px" onClick="onSelectEmployee6" fitToContent="false"/>
+      <Bitmap profile="employeesRowBg" id="rowBackgrounds[6]" position="-143px -408px" size="5px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowPortraits[6]" position="-143px -408px" size="74px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowStatusDots[6]" position="164px -419px" size="8px 8px"/>
+      <Text profile="employeesCardRole" id="rowRoles[6]" position="-60px -436px" size="220px 20px"/>
+      <Text profile="employeesCardMeta" id="rowMeta[6]" position="-60px -455px" size="240px 22px"/>
+      <Bitmap profile="employeesRowBg" id="rowTips[6]" position="184px -430px" size="15px 30px"/>
+      <Button profile="employeesCard" id="employeeRows[7]" position="-143px -488px" size="330px 74px" onClick="onSelectEmployee7" fitToContent="false"/>
+      <Bitmap profile="employeesRowBg" id="rowBackgrounds[7]" position="-143px -488px" size="5px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowPortraits[7]" position="-143px -488px" size="74px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowStatusDots[7]" position="164px -499px" size="8px 8px"/>
+      <Text profile="employeesCardRole" id="rowRoles[7]" position="-60px -516px" size="220px 20px"/>
+      <Text profile="employeesCardMeta" id="rowMeta[7]" position="-60px -535px" size="240px 22px"/>
+      <Bitmap profile="employeesRowBg" id="rowTips[7]" position="184px -510px" size="15px 30px"/>
+      <Button profile="employeesCard" id="employeeRows[8]" position="-143px -568px" size="330px 74px" onClick="onSelectEmployee8" fitToContent="false"/>
+      <Bitmap profile="employeesRowBg" id="rowBackgrounds[8]" position="-143px -568px" size="5px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowPortraits[8]" position="-143px -568px" size="74px 74px"/>
+      <Bitmap profile="employeesRowBg" id="rowStatusDots[8]" position="164px -579px" size="8px 8px"/>
+      <Text profile="employeesCardRole" id="rowRoles[8]" position="-60px -596px" size="220px 20px"/>
+      <Text profile="employeesCardMeta" id="rowMeta[8]" position="-60px -615px" size="240px 22px"/>
+      <Bitmap profile="employeesRowBg" id="rowTips[8]" position="184px -590px" size="15px 30px"/>
+    </GuiElement>
+  </GuiElement>
+</GUI>

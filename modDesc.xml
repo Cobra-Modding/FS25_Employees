@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="113">
+    <author>Marcus (Cobra Modding)</author>
+    <version>1.0.0.0</version>
+    
+	<title>
+		<de>Mitarbeiterverwaltung</de>
+		<en>Employees</en>
+	</title>
+    
+	<description>
+		<de>Festes Personal mit Namen, Alter, Qualifikationen und zuweisbaren Aufgabengebieten. Tierhaltung kontrolliert um 08:00 und 17:00 Uhr, verteilt vorhandenes Futter fair auf belegte Haltungen, füllt Wasser kostenlos direkt auf, nutzt vorhandenes Stroh aus Hof-/Silo-/Ballen-/Palettenlagern und räumt Mist zur nächsten Mistplatte. Maschinentechnik arbeitet von 08:00 bis 17:00 Uhr; Fahrzeuge werden während der Wartungszeit gesperrt. Mitarbeiter gehen mit 65 Jahren in Rente; ihr Profil wird danach auf das Startalter zurückgesetzt und kann erneut eingestellt werden. Neue Mitarbeiter starten ohne Aufgabengebiet. Leiharbeiter stehen in der Auswahl an erster Stelle und intern als vierte Vertragsart für maximal 8 Arbeitsstunden pro Einsatz zur Verfügung und verlassen den Hof danach automatisch. Personalübersicht im Mitarbeiter-Menü. Krankheiten mit spielstundenbasierter Genesungszeit. Reparaturen zeigen die verbleibende Dauer direkt in der Fahrzeuginfo unter Schaden; Tierkontrollen laufen nur mit zugewiesenem Tierhelfer. Angestellten-Gehälter werden nur beim Monatswechsel abgerechnet. Multiplayer-Unterstützung mit serverseitiger Mitarbeiterlogik und synchronisierter Mitarbeiterverwaltung.</de>
+		<en>Named employees with age and development data, four contract types including temporary workers, monthly wages and retirement at age 65. Retired roster profiles can be hired again at their original starting age. New hires start without a work role. Staff overview, maintenance vehicle lock and illnesses with recovery measured in in-game hours. Multiplayer support with server-authoritative employee logic and synchronized staff management.</en>
+	</description>
+    
+	<iconFilename>icon_Employees.dds</iconFilename>
+    
+	<multiplayer supported="true"/>
+    
+	<extraSourceFiles>
+		<sourceFile filename="scripts/Employees.lua"/>
+		<sourceFile filename="scripts/EmployeesNetwork.lua"/>
+		<sourceFile filename="scripts/EmployeesMenu.lua"/>
+	</extraSourceFiles>
+	
+</modDesc>
