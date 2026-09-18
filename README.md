@@ -10,7 +10,7 @@ Version 1.0.0.0
 - Echte Mitarbeiternamen: Anstelle von „KI-Helfer A/B/C …“ wird bei verwalteten Jobs der Name des Mitarbeiters angezeigt.
 - Arbeitsstunden: Normale Mitarbeiter verbrauchen während KI-Arbeiten ihr monatliches Stundenkontingent. Ist es ausgeschöpft, wird der Job beendet.
 - Monatliche Gehälter: Die Gehälter werden beim Monatswechsel abgezogen; gleichzeitig wird das Stundenkontingent normaler Mitarbeiter zurückgesetzt.
-- Kündigungen: Ein Mitarbeiter kann gekündigt werden. Der Austritt erfolgt nach vier Monatswechseln; die Kündigung kann vorher zurückgenommen werden.
+- Kündigungen: Ein Mitarbeiter kann gekündigt werden. Der Austritt erfolgt nach drei Monatswechseln; die Kündigung kann vorher zurückgenommen werden.
 - Alterung: Mitarbeiter altern mit den Spielmonaten.
 - Rente: Mit 65 Jahren scheiden Mitarbeiter aus. Drei Monate vorher gibt es eine Warnung. Der frei gewordene Personenplatz kann anschließend wieder mit seinem ursprünglichen Startalter eingestellt werden.
 - Krankheiten: Normale Mitarbeiter haben monatlich eine 3-%-Chance, krank zu werden.
