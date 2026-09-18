@@ -52,6 +52,7 @@ M.roles = {
 }
 M.animalServiceThreshold = 0.20
 M.animalServiceTarget = 0.95
+M.pigletFeedMaxAgeMonths = 6
 M.animalCheckHours = {8, 17}
 M.machineWorkStartHour = 8
 M.machineWorkEndHour = 17
@@ -1857,6 +1858,102 @@ function M:getSpecialPetFeedFillType(placeable)
     return g_fillTypeManager:getFillTypeIndexByName(fillTypeName), label
 end
 
+function M:isPigletFeedFillType(fillTypeIndex)
+    if fillTypeIndex == nil or g_fillTypeManager == nil then return false end
+
+    local pigletFeedIndex = nil
+    if g_fillTypeManager.getFillTypeIndexByName ~= nil then
+        pigletFeedIndex = g_fillTypeManager:getFillTypeIndexByName("PIGLETFEED")
+        if pigletFeedIndex == nil then
+            pigletFeedIndex = g_fillTypeManager:getFillTypeIndexByName("pigletFeed")
+        end
+    end
+    if pigletFeedIndex ~= nil and pigletFeedIndex == fillTypeIndex then return true end
+
+    local function normalize(value)
+        if value == nil then return "" end
+        return string.lower(tostring(value)):gsub("[^%w]", "")
+    end
+
+    local fillTypeName = nil
+    if g_fillTypeManager.getFillTypeNameByIndex ~= nil then
+        fillTypeName = g_fillTypeManager:getFillTypeNameByIndex(fillTypeIndex)
+    end
+    local normalizedName = normalize(fillTypeName)
+    if normalizedName == "pigletfeed" or normalizedName == "ferkelfutter" then return true end
+
+    local title = nil
+    if g_fillTypeManager.getFillTypeTitleByIndex ~= nil then
+        title = g_fillTypeManager:getFillTypeTitleByIndex(fillTypeIndex)
+    end
+    local normalizedTitle = normalize(title)
+    return normalizedTitle == "pigletfeed" or normalizedTitle == "ferkelfutter"
+end
+
+function M:getHusbandryClusters(placeable)
+    if placeable == nil then return nil end
+
+    if placeable.getClusters ~= nil then
+        local ok, clusters = pcall(placeable.getClusters, placeable)
+        if ok and type(clusters) == "table" then return clusters end
+    end
+
+    local animalSpec = placeable.spec_husbandryAnimals
+    if animalSpec ~= nil and animalSpec.clusterSystem ~= nil
+        and animalSpec.clusterSystem.getClusters ~= nil then
+        local ok, clusters = pcall(animalSpec.clusterSystem.getClusters, animalSpec.clusterSystem)
+        if ok and type(clusters) == "table" then return clusters end
+    end
+
+    return nil
+end
+
+function M:shouldSkipPigletFeed(placeable, fillTypeIndex)
+    if not self:isPigletFeedFillType(fillTypeIndex) then return false end
+
+    local clusters = self:getHusbandryClusters(placeable)
+    if clusters == nil then return false end
+
+    local maxAge = tonumber(self.pigletFeedMaxAgeMonths) or 6
+    local sawAnimal = false
+    local sawKnownAge = false
+
+    for _, cluster in pairs(clusters) do
+        if cluster ~= nil then
+            local amount = nil
+            if cluster.getNumAnimals ~= nil then
+                local ok, value = pcall(cluster.getNumAnimals, cluster)
+                if ok then amount = tonumber(value) end
+            end
+            if amount == nil and type(cluster) == "table" then
+                amount = tonumber(cluster.numAnimals or cluster.numAnimalsInCluster or cluster.count)
+            end
+
+            if amount ~= nil and amount > 0 then
+                sawAnimal = true
+
+                local age = nil
+                if cluster.getAge ~= nil then
+                    local ok, value = pcall(cluster.getAge, cluster)
+                    if ok then age = tonumber(value) end
+                end
+                if age == nil and type(cluster) == "table" then
+                    age = tonumber(cluster.age)
+                end
+
+                if age == nil then return false end
+
+                sawKnownAge = true
+                if age < maxAge then
+                    return false
+                end
+            end
+        end
+    end
+
+    return sawAnimal and sawKnownAge
+end
+
 function M:getFoodFillCandidates(placeable, farmId)
     local spec = placeable and placeable.spec_husbandryFood
     if spec == nil then return {} end
@@ -1875,13 +1972,15 @@ function M:getFoodFillCandidates(placeable, farmId)
         local groupCandidates = {}
         for _, fillTypeIndex in pairs(group.fillTypes or {}) do
             if not seen[fillTypeIndex] and (spec.supportedFillTypes == nil or spec.supportedFillTypes[fillTypeIndex] ~= nil) then
-                local available = self:getFarmStorageAmount(farmId, fillTypeIndex)
-                table.insert(groupCandidates, {
-                    fillType=fillTypeIndex,
-                    productionWeight=tonumber(group.productionWeight) or 0,
-                    available=available
-                })
                 seen[fillTypeIndex] = true
+                if not self:shouldSkipPigletFeed(placeable, fillTypeIndex) then
+                    local available = self:getFarmStorageAmount(farmId, fillTypeIndex)
+                    table.insert(groupCandidates, {
+                        fillType=fillTypeIndex,
+                        productionWeight=tonumber(group.productionWeight) or 0,
+                        available=available
+                    })
+                end
             end
         end
         table.sort(groupCandidates, function(a,b) return a.available > b.available end)
@@ -1891,11 +1990,13 @@ function M:getFoodFillCandidates(placeable, farmId)
     end
     for fillTypeIndex,_ in pairs(spec.supportedFillTypes or {}) do
         if not seen[fillTypeIndex] then
-            local available = self:getFarmStorageAmount(farmId, fillTypeIndex)
-            if available > 0.001 then
-                table.insert(candidates, {fillType=fillTypeIndex, productionWeight=0, available=available})
-            end
             seen[fillTypeIndex] = true
+            if not self:shouldSkipPigletFeed(placeable, fillTypeIndex) then
+                local available = self:getFarmStorageAmount(farmId, fillTypeIndex)
+                if available > 0.001 then
+                    table.insert(candidates, {fillType=fillTypeIndex, productionWeight=0, available=available})
+                end
+            end
         end
     end
 
