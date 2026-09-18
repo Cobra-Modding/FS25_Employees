@@ -51,3 +51,6 @@ Version 1.0.0.0
 - Synchronisierte Aktionen: Einstellen, Aufgabengebiet ändern, Weiterbildung starten, kündigen und Kündigung zurücknehmen werden an den Server gesendet.
 - Mehrere Farmen: Tierpflege und Maschinentechnik werden im Multiplayer getrennt pro Farm verwaltet.
 - Savegame-Unterstützung: Mitarbeiter, Entwicklung, Krankheiten, Weiterbildungen, Wartungen und Tierkontrollzeiten werden in einer eigenen employees.xml gespeichert.
+
+      - Auch für Hof Bergmann Karte Version 1.5.0.0 Beta1 geeignet
+      - Ferkel bekommen wenn sie von einem Tierpfleger gefüttert werden, neben Ferkelfutter auch noch Schweinefutter. Das ist so gewollt. 
