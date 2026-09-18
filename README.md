@@ -1,0 +1,53 @@
+Version 1.0.0.0
+
+- Mitarbeiterverwaltung: Bis zu 10 feste Personenprofile mit eigenem Namen, Alter und zugeordnetem KI-Helfer.
+- Vier Vertragsarten: Geringfügig für 600 € / Monat und 40 Spielstunden, Teilzeit für 1.600 € / Monat und 80 Stunden, Vollzeit für 3.200 € / Monat und 160 Stunden sowie Leiharbeiter für 120 € pro Einsatz.
+- Leiharbeiter: Stehen für 8 Spielstunden ab Anforderung zur Verfügung und verlassen den Hof anschließend automatisch. Sie erhalten keine Weiterbildung und arbeiten mit voller Leistungsstufe.
+- Aufgabengebiete: Jeder Mitarbeiter kann Feldarbeit, Transport, Tierhaltung oder Maschinentechnik zugewiesen bekommen. Neue Mitarbeiter starten mit „Nicht zugewiesen“.
+- KI-Helfer-Verknüpfung: Feldarbeiten werden nur Mitarbeitern mit Feldarbeit zugeteilt; Goto-, Liefer-, Förderband- und Transportjobs benötigen Transport.
+- Mitarbeiterauswahl im Singleplayer: Beim Start eines passenden KI-Auftrags erscheint eine Auswahl der verfügbaren Mitarbeiter.
+- Automatische Auswahl im Multiplayer: Dort wird ein geeigneter Mitarbeiter automatisch gewählt; bevorzugt wird derjenige mit dem geringsten bereits verbrauchten Anteil seines Stundenkontingents.
+- Echte Mitarbeiternamen: Anstelle von „KI-Helfer A/B/C …“ wird bei verwalteten Jobs der Name des Mitarbeiters angezeigt.
+- Arbeitsstunden: Normale Mitarbeiter verbrauchen während KI-Arbeiten ihr monatliches Stundenkontingent. Ist es ausgeschöpft, wird der Job beendet.
+- Monatliche Gehälter: Die Gehälter werden beim Monatswechsel abgezogen; gleichzeitig wird das Stundenkontingent normaler Mitarbeiter zurückgesetzt.
+- Kündigungen: Ein Mitarbeiter kann gekündigt werden. Der Austritt erfolgt nach vier Monatswechseln; die Kündigung kann vorher zurückgenommen werden.
+- Alterung: Mitarbeiter altern mit den Spielmonaten.
+- Rente: Mit 65 Jahren scheiden Mitarbeiter aus. Drei Monate vorher gibt es eine Warnung. Der frei gewordene Personenplatz kann anschließend wieder mit seinem ursprünglichen Startalter eingestellt werden.
+- Krankheiten: Normale Mitarbeiter haben monatlich eine 3-%-Chance, krank zu werden.
+- Vier Krankheiten: Erkältung, Magen-Darm, Grippe und Rückenprobleme mit unterschiedlich langen Genesungszeiten.
+- Genesung in Spielzeit: Krankheit läuft nach Spielstunden ab. Erkrankte Mitarbeiter können nicht eingesetzt oder weitergebildet werden; laufende Arbeiten bzw. Wartungen werden beendet.
+- Weiterbildungen: Feldarbeit, Transport, Tierhaltung und Maschinentechnik besitzen jeweils 3 Stufen.
+- Weiterbildungskosten: Stufe 1 kostet 750 €, Stufe 2 1.500 €, Stufe 3 2.250 €.
+- Weiterbildungsdauer: Die drei Stufen dauern 2, 5 und 8 Spielstunden.
+- Leistungsstufen: Ohne Weiterbildung arbeitet ein normaler Mitarbeiter mit 25 %, danach mit 50 %, 75 % und 100 %.
+- Feldarbeit und Transport: Die Weiterbildungsstufe beeinflusst die tatsächliche KI-Fahrgeschwindigkeit bzw. das Geschwindigkeitslimit des Fahrzeugs.
+- Tierhaltung und Maschinentechnik: Eine bessere Weiterbildung verkürzt die dafür benötigte Arbeitszeit.
+- Automatische Tierkontrollen: Ein Tierpfleger kontrolliert die Haltungen automatisch um 08:00 und 17:00 Uhr.
+- Nur belegte Haltungen: Leere Ställe und Weiden werden übersprungen.
+- 20-%-Schwelle: Futter, Wasser und Einstreu werden erst aufgefüllt, wenn der jeweilige Bestand unter 20 % liegt.
+- 95-%-Ziel: Danach versucht der Tierpfleger, den Bestand auf 95 % zu bringen.
+- Faire Futterverteilung: Wenn nicht genug Futter vorhanden ist, werden bedürftige Tierhaltungen gemeinsam berücksichtigt, statt dass der zuerst gefundene Stall alles erhält.
+- Futter aus Hofbeständen: Der Mod sucht verwendbares Futter unter anderem in normalen Silos, Siloerweiterungen, Ballenlagern, Palettenlagern, BigBags und ObjectStorages.
+- Hof-Bergmann-Unterstützung: Die Lagerlogik berücksichtigt die speziellen Hof-Bergmann-Paletten und ObjectStorages.
+- Haustierfutter: Spezielle Fülltypen wie Hunde-/Katzenfutter können ebenfalls berücksichtigt werden.
+- Wasser: Der Tierpfleger füllt Wasser direkt und kostenlos in geeignete Tränken; dafür wird kein Wasser aus einem Hoflager abgezogen.
+- Einstreu: Der Mod erkennt sowohl Stroh als auch WOODSHAVINGS/Holzspäne, abhängig davon, was der jeweilige Stall tatsächlich unterstützt.
+- Holzspäne auf Hof Bergmann: Auch eingelagerte Holzspäne-Paletten im ObjectStorage können als Bestand erkannt und entnommen werden.
+- Bestandsschutz: Wird Futter oder Einstreu vom Stall nicht angenommen, versucht der Mod den reservierten Lagerbestand wieder zurückzugeben, statt ihn einfach verschwinden zu lassen.
+- Mist: Vorhandener Mist wird in die nächstgelegene erreichbare Mistplatte der eigenen Farm verschoben.
+- Farmtrennung: Die automatische Versorgung greift nur auf Bestände und Haltungen zu, auf die die betreffende Farm Zugriff hat.
+- Maschinentechniker: Arbeitet automatisch zwischen 08:00 und 17:00 Uhr.
+- Reparaturschwelle: Fahrzeuge werden ab ungefähr 20 % Schaden für eine Wartung ausgewählt.
+- Fahrzeugauswahl: Bevorzugt wird ein beschädigtes eigenes Fahrzeug, das gerade nicht gefahren wird, nicht in Bewegung ist und keinen aktiven KI-Job ausführt.
+- Wartungsdauer: Sie hängt von der Ausbildungsstufe des Maschinentechnikers ab und läuft nur innerhalb der Arbeitszeit von 08:00 bis 17:00 Uhr weiter.
+- Fahrzeugsperre während Wartung: Das Fahrzeug kann währenddessen nicht betreten, durchgetabbt, benutzt oder normal angehängt werden.
+- Reparaturanzeige: In der Fahrzeuginfo erscheint unter anderem die verbleibende Reparaturdauer.
+- Reparaturkosten: Vor Beginn und bei Abschluss wird geprüft, ob die Farm die Reparatur bezahlen kann.
+- Personalübersicht: Das Mitarbeiter-Menü zeigt Mitarbeiter nach Vertragsart und Aufgabengebiet sowie Status, Alter, freie Stunden und weitere Vertragsinformationen.
+- Statusanzeigen: Unter anderem „Verfügbar“, „Im Einsatz“, „Fortbildung“, „Krank“, „Stundenkontingent erreicht“, Wartungsaufgabe oder „Aufgabengebiet zuweisen“.
+- Multiplayer: Die eigentliche Mitarbeiterlogik läuft serverseitig.
+- Multiplayer-Synchronisation: Mitarbeiter, Verträge, Arbeitsstunden, Alter, Rollen, Weiterbildungen, Krankheiten, aktive KI-Jobs und Wartungen werden an die Clients übertragen.
+- Farm-Sicherheit im Multiplayer: Ein Client darf Verwaltungsaktionen nur für Mitarbeiter seiner eigenen Farm ausführen.
+- Synchronisierte Aktionen: Einstellen, Aufgabengebiet ändern, Weiterbildung starten, kündigen und Kündigung zurücknehmen werden an den Server gesendet.
+- Mehrere Farmen: Tierpflege und Maschinentechnik werden im Multiplayer getrennt pro Farm verwaltet.
+- Savegame-Unterstützung: Mitarbeiter, Entwicklung, Krankheiten, Weiterbildungen, Wartungen und Tierkontrollzeiten werden in einer eigenen employees.xml gespeichert.
