@@ -4,7 +4,7 @@
 --
 -- Version 1.0.0.0
 --
--- Multiplayer state/action synchronization for FS25_Employees
+-- Keine Änderung am Skript ohne meine Erlaubnis
 -- ============================================================
 
 EmployeesNetwork = EmployeesNetwork or {}
