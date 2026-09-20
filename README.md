@@ -1,4 +1,5 @@
 <img width="1024" height="576" alt="fsScreen_2026_09_20_11_29_29" src="https://github.com/user-attachments/assets/ddb72e68-923e-4b7f-89d2-d74650a31b7e" />
+
 <img width="1024" height="576" alt="fsScreen_2026_09_20_11_29_18" src="https://github.com/user-attachments/assets/313cf26b-a146-471a-af79-306b6c7bec6f" />
 
 - Mitarbeiterverwaltung: Bis zu 10 feste Personenprofile mit eigenem Namen, Alter und zugeordnetem KI-Helfer.
