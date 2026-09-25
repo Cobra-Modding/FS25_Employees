@@ -1,5 +1,6 @@
 <img width="3840" height="2160" alt="fsScreen_2026_09_20_11_29_29" src="https://github.com/user-attachments/assets/7ecdb104-bcb3-42b1-87ba-1babb4676c8d" />
 <img width="3840" height="2160" alt="fsScreen_2026_09_20_11_29_18" src="https://github.com/user-attachments/assets/a00f5570-f5cc-4be6-bce1-b9f75986020c" />
+
 - Mitarbeiterverwaltung: Bis zu 10 feste Personenprofile mit eigenem Namen, Alter und zugeordnetem KI-Helfer.
 - Vier Vertragsarten: Geringfügig für 600 € / Monat und 40 Spielstunden, Teilzeit für 1.600 € / Monat und 80 Stunden, Vollzeit für 3.200 € / Monat und 160 Stunden sowie Leiharbeiter für 120 € pro Einsatz.
 - Leiharbeiter: Stehen für 8 Spielstunden ab Anforderung zur Verfügung und verlassen den Hof anschließend automatisch. Sie erhalten keine Weiterbildung und arbeiten mit voller Leistungsstufe.
