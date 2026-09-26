@@ -54,4 +54,6 @@
 - Savegame-Unterstützung: Mitarbeiter, Entwicklung, Krankheiten, Weiterbildungen, Wartungen und Tierkontrollzeiten werden in einer eigenen employees.xml gespeichert.
 
       - Auch für Hof Bergmann Karte Version 1.5.0.0 Beta1 geeignet
-      - Ferkel bekommen wenn sie von einem Tierpfleger gefüttert werden, neben Ferkelfutter auch noch Schweinefutter. Das ist so gewollt. 
+      - Ferkel bekommen wenn sie von einem Tierpfleger gefüttert werden, neben Ferkelfutter auch noch Schweinefutter. Das ist so gewollt.
+
+  https://www.tiktok.com/@cobra_modding/video/7689766429381479702
